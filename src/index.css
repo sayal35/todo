@@ -1,0 +1,116 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  background: linear-gradient(to left, lightblue, lightgreen);
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Heading Styling */
+.heading {
+  color: darkblue;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 35px;
+}
+
+/* Information Text Styling */
+.info-text {
+  text-align: center;
+  color: darkblue;
+  font-size: 18px;
+  margin-bottom: 20px; /* Added margin to give space between info text and content */
+}
+
+/* App Container Styling */
+.app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Made it responsive with minmax */
+  gap: 40px;
+  justify-content: center;
+  padding: 50px;
+  max-width: 1200px; /* Limited the app width for better layout control */
+  margin: 0 auto; /* Centering the app */
+}
+
+/* Note Textarea Styling */
+.note {
+  padding: 17px;
+  border-radius: 15px;
+  resize: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  height: 200px;
+  color: darkblue;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7); /* Increased opacity for better contrast */
+  box-sizing: border-box;
+  transition: box-shadow 300ms ease; /* Applied transition to hover effect */
+}
+
+/* Placeholder Styling */
+.note::placeholder {
+  color: gray;
+  opacity: 0.5; /* Reduced opacity for better readability */
+}
+
+/* Hover and Focus State for Notes */
+.note:hover,
+.note:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling */
+.btn {
+  height: 200px;
+  width: 100%; /* Ensures the button takes full width of its column */
+  border: 2px solid rgba(255, 255, 255, 0.37);
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 15px;
+  font-size: 70px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 300ms ease, color 300ms ease; /* Smoothed the transitions */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.55);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Rounding Container Styling (Unused ID was changed for clarity) */
+#round {
+  background-color: gray;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Note Container (sit) Styling */
+.sit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Increased gap for better spacing */
+  position: relative; /* Added for positioning the minus button */
+}
+
+/* Minus Button (Design) Styling */
+.design {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  /* Remove the following lines to get rid of the circle */
+  padding: 0;
+  background-color: transparent; /* No background */
+  border-radius: 0;
+  transition: color 300ms ease; /* Only change text color */
+}
+
+.design:hover {
+  color: darkred; /* Only change text color on hover */
+}
+
